@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 5rem 20rem;
+}
+.contact{
+    width: 100%;
+    height: 100%;
+    background-color: #d8dde2;
+    border-radius: 60rem 2rem;
+}
+.contact > div{
+    flex: 1;
+}
+.telephone > div{
+    position: absolute;
+}
+
+.telephone{
+    width:30rem;
+    height:20rem ;
+    background-color: #5f9ea0;
+    border-radius: 100rem 100rem 20rem 20rem ;
+    position: relative;
+    animation: telephoneAnim 4s infinite reverse;
+}
+
+@keyframes telephoneAnim{
+    0%{
+        transform: rotateZ(0);
+    }
+    1%,
+    3%,
+    5%,
+    7%,
+    9%{
+        transform: rotateZ(-1deg);
+    }
+    2%,
+    4%,
+    6%,
+    8%,
+    10%{
+        transform: rotateZ(1deg);
+    }
+    11%,
+    100%{
+        transform: rotateZ(0);
+    }
+
+}
+
+.telephone::before,
+.telephone::after{
+    content: '';
+    width: 7rem;
+    height: 22rem;
+    background-color: #5f9ea0;
+    position: absolute;
+    bottom: 0;
+    border-radius: 5rem 5rem 0 0;
+}
+.telephone::before{
+    left:40px;
+}
+.telephone::after{
+    right:4rem;
+}
+.handset{
+    width: 40rem;
+    height:5rem;
+    background-color: #df6281;
+    top: -7.2rem;
+    left: -5rem;
+    border-radius: 5rem;
+}
+.handset::before,
+.handset::after{
+    content: '';
+    position: absolute;
+    width: 6rem;
+    height: 4rem;
+    background-color: #f1bd78;
+    bottom: -4.3rem;
+    border-radius: 5rem ;
+}
+.handset::before{
+    left: 0;
+}
+.handset::after{
+    right: 0;
+}
+.dialing-mechanism{
+    width: 10rem;
+    height: 10rem;
+    background-color: #d8dde2;
+    top: 5rem;
+    left: 10rem;
+    border-radius: 5rem;
+    border: 2.5rem dotted #b0c1e4;
+    z-index: 1;
+}
+.stand{
+    width: 100%;
+    height: 5rem;
+    background-color: #377e7e;
+    bottom: -5.5rem;
+    border-radius: 5rem;
+}
+
+.form-wrapper{
+    flex-direction:column ;
+    gap: 5rem 0;
+}
+.form-heading{
+    font-size: 6rem;
+    color: #3a3a58;
+}
+.form-wrapper form{
+    flex-direction:column ;
+    gap: 1.5rem 0;
+}
+
+form input,textarea{
+    width: 40rem;
+    border: none;
+    outline: none;
+    background-color: #5f9ea0;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem 2rem;
+}
+input::placeholder,textarea::placeholder{
+    color: #fff;
+}
+textarea{
+    resize: vertical;
+    max-height: 10rem;
+    min-height: 5rem;
+}
+
+.form-btn{
+    background-color: #df6281;
+}
+.form-btn:hover{
+    cursor: pointer;
+}
+@media(max-width:1650px){
+    .container{
+        padding: 5rem;
+    }
+    .contact{
+        border-radius: 30rem 2rem;
+    }
+}
+
+
+@media(max-width:1000px){
+    .container{
+        padding: 0;
+    }
+    .contact{
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+    .telephone-wrapper{
+        margin-top: 10rem;
+    }
+}
+@media(max-width:700px){
+    html{
+        font-size: 50%;
+    }
+ 
+}
+@media(max-width:400px){
+    html{
+        font-size: 40%;
+    }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
